@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.glassfish.grizzly:grizzly-framework-monitoring:2.3.28">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.grizzly/grizzly-framework-monitoring/2.3.28/87568e160dca0a601471818870a9f1c07f27e454/grizzly-framework-monitoring-2.3.28.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.grizzly/grizzly-framework-monitoring/2.3.28/abcc4a75b8eaee5e9b0815adc7de8186b3b2094e/grizzly-framework-monitoring-2.3.28-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

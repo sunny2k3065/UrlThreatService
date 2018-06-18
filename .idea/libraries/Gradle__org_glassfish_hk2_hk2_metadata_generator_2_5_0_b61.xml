@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.glassfish.hk2:hk2-metadata-generator:2.5.0-b61">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-metadata-generator/2.5.0-b61/a2e344ec6516a5f6978f31b3fd34a96288812c/hk2-metadata-generator-2.5.0-b61.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-metadata-generator/2.5.0-b61/eb24911a67785db62538280539fabb2e99f81d0/hk2-metadata-generator-2.5.0-b61-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

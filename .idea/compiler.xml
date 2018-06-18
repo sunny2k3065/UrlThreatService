@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="UrlThreatService_main" target="1.8" />
+      <module name="UrlThreatService_test" target="1.8" />
+      <module name="UTSCommon_main" target="1.8" />
+      <module name="UTSCommon_test" target="1.8" />
+      <module name="UTServer_main" target="1.8" />
+      <module name="UTServer_test" target="1.8" />
+      <module name="UTSRouter_main" target="1.8" />
+      <module name="UTSRouter_test" target="1.8" />
+      <module name="work2016-UrlThreatService_main" target="1.8" />
+      <module name="work2016-UrlThreatService_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
