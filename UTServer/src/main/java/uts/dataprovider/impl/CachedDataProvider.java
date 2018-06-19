@@ -12,7 +12,7 @@ public class CachedDataProvider extends DataProvider{
 
     private HashMap<String,HashMap<String,String>> elasticCache = new HashMap<String,HashMap<String,String>>();
 
-    // TODO: externalize to config or calculate based on heap size
+    // TODO: externalize to config and enforce using a proper elastic cache impl in place of the temp HashMap
     private static int MAX_CACHE_SIZE = 2000;
 
     public CachedDataProvider(DataProvider dp, ServiceLocator sl) {
@@ -35,7 +35,7 @@ public class CachedDataProvider extends DataProvider{
 
                 json = dp.getProviderThreatData(hostPort,pathQuery);
 
-                if(json != null || !json.isEmpty()){
+                if(json != null && !json.isEmpty()){
 
                     domainMap.put(pathQuery, json);
                 }

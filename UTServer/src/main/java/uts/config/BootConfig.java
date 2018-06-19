@@ -37,6 +37,16 @@ public class BootConfig {
     private String redisHost;
     private String cacheSizeInMB;
 
+    public String getServerClusterId() {
+        return serverClusterId;
+    }
+
+    public void setServerClusterId(String serverClusterId) {
+        this.serverClusterId = serverClusterId;
+    }
+
+    private String serverClusterId;
+
 
     private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
 

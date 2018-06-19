@@ -1,6 +1,7 @@
 {
 
-  "serverPort" : "8990"
-
+  "serverPort" : "8990",
+  "redisHost"  : "slc10wss.us.oracle.com",
+  "serverClusterId" :1
 
 }

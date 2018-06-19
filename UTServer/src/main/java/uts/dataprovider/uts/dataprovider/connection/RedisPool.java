@@ -1,21 +1,18 @@
 package uts.dataprovider.uts.dataprovider.connection;
 
-import org.jvnet.hk2.annotations.Service;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
+import uts.config.BootConfigLoader;
 
-import javax.inject.Singleton;
 import java.time.Duration;
+import java.util.Optional;
 
-@Service
-@Singleton
 public class RedisPool {
 
-    private static String REDIS_HOST = "slc10wss.us.oracle.com";
+    private static String REDIS_HOST = getRedisHostFromBootCOnfig().orElseGet(() -> "ssslc10wss.us.oracle.com");
 
     final JedisPoolConfig poolConfig = buildPoolConfig();
-    private JedisPool jedisPool = new JedisPool(poolConfig, "REDIS_HOST");
-
+    private JedisPool jedisPool = new JedisPool(poolConfig, REDIS_HOST, 6379);
 
     //TODO  need to externalize these to  config
     private JedisPoolConfig buildPoolConfig() {
@@ -35,5 +32,10 @@ public class RedisPool {
 
     public JedisPool getJedisPool() {
         return jedisPool;
+    }
+    private static Optional<String> getRedisHostFromBootCOnfig(){
+
+        return Optional.ofNullable(BootConfigLoader.bootstrapConfig.entrySet().iterator().next().getValue().getRedisHost());
+
     }
 }

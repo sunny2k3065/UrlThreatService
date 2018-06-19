@@ -3,10 +3,10 @@ package uts.server;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-public class ThreatRequest  {
+public class ThreatRequest {
 
 
-    public int getThreatIndex() {
+    public Integer getThreatIndex() {
         return threatIndex;
     }
 
@@ -38,13 +38,34 @@ public class ThreatRequest  {
         isPostAllowed = postAllowed;
     }
 
-    private int threatIndex; // 1 : is a thret, -1: not a threat, 0: no threat data at server
+    private Integer threatIndex; // 1 : is a threat, -1: not a threat, 0: no threat data at server
 
     private Boolean isHttpAllowed;
 
     private Boolean isGetAllowed;
 
     private Boolean isPostAllowed;
+
+
+    private String hostPort;
+
+    public String getHostPort() {
+        return hostPort;
+    }
+
+    public void setHostPort(String hostPort) {
+        this.hostPort = hostPort;
+    }
+
+    public String getPathQuery() {
+        return pathQuery;
+    }
+
+    public void setPathQuery(String pathQuery) {
+        this.pathQuery = pathQuery;
+    }
+
+    private String pathQuery;
 
 
 }

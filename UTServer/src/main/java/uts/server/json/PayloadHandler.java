@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.ObjectReader;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import uts.server.ThreatRequest;
 
-
 import java.io.IOException;
 
 public class PayloadHandler {
@@ -23,10 +22,13 @@ public class PayloadHandler {
         return reader.readValue(jsonRequest);
     }
 
-    public static String generateJson(ThreatRequest response)
+    public static String generateJson(ThreatRequest request)
             throws JsonProcessingException {
 
-        return writer.writeValueAsString(response);
+        request.setHostPort(null);
+        request.setPathQuery(null);
+
+        return writer.writeValueAsString(request);
     }
 
 }

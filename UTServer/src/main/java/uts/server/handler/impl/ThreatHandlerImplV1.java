@@ -1,5 +1,6 @@
 package uts.server.handler.impl;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.glassfish.hk2.api.ServiceLocator;
 import org.jvnet.hk2.annotations.Service;
 import uts.dataprovider.DataProvider;
@@ -10,6 +11,7 @@ import uts.server.ThreatResponse;
 import uts.server.handler.ThreatHandler;
 import uts.server.json.PayloadHandler;
 
+import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
 import java.io.IOException;
@@ -26,12 +28,14 @@ public class ThreatHandlerImplV1 implements ThreatHandler {
 
     private ThreatResponse noDataResponse;
 
+    @Inject
     public ThreatHandlerImplV1(ServiceLocator sl){
 
         this.sl = sl;
-        this.dp = sl.getService(RedisDataProvider.class);
+        this.dp = sl.getService(DataProvider.class);
         cdp = new CachedDataProvider(dp,sl);
         noDataResponse = getNoDataThreatResponse();
+        System.out.println(" ######### threathandler v1 construction");
 
     }
 
@@ -45,6 +49,7 @@ public class ThreatHandlerImplV1 implements ThreatHandler {
 
 
     @Override public ThreatResponse handleGet(String hostPort, String pathQuery) throws IOException {
+        System.out.println(" ####rchd here hostport: "+hostPort + " pathquery: "+pathQuery);
         return getThreatData(hostPort,pathQuery,cdp);
     }
 
@@ -61,20 +66,34 @@ public class ThreatHandlerImplV1 implements ThreatHandler {
 
     public  ThreatResponse getThreatData(String hostPort, String pathQuery, DataProvider provider ) throws IOException {
 
-        String json = provider.getProviderThreatData(hostPort, pathQuery);
-
+        String json = null;
+        try {
+            json = provider.getProviderThreatData(hostPort, pathQuery);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(" json string read :"+json);
         if(json == null || json.isEmpty()){
             return noDataResponse;
         }
-        return (ThreatResponse) PayloadHandler.parseJson(json);
+        return new ThreatResponse(PayloadHandler.parseJson(json));
 
     }
 
 
 
     public  boolean writeThreatData(String hostPort, String pathQuery, ThreatRequest request, DataProvider provider ) throws IOException {
+        System.out.println(" ######### In handle post!!");
+        boolean bool = false;
+        try {
+            String json  = PayloadHandler.generateJson(request);
 
-        return provider. writeProviderThreatData(hostPort, pathQuery, PayloadHandler.generateJson(request));
+            bool = provider. writeProviderThreatData(hostPort, pathQuery, json);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return bool;
 
     }
 

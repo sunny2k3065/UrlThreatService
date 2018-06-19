@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class BootConfigLoader {
-    private static Map<String, BootConfig> bootstrapConfig = new ConcurrentHashMap<>(1);
+    public static Map<String, BootConfig> bootstrapConfig = new ConcurrentHashMap<>(1);
 
     public static BootConfig getBootstrapConfig(String bootConfLocation) {
         return bootstrapConfig.computeIfAbsent(bootConfLocation, value -> {

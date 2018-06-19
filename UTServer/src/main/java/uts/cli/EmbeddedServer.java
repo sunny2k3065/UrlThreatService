@@ -3,12 +3,14 @@ package uts.cli;
 import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.grizzly.http.server.NetworkListener;
+//import org.glassfish.jersey.ServiceLocatorProvider;
 import org.glassfish.hk2.api.ServiceLocator;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.ServerProperties;
 import uts.config.BootConfig;
 
+import javax.ws.rs.core.Feature;
 import javax.ws.rs.core.UriBuilder;
 import javax.ws.rs.ext.MessageBodyReader;
 import javax.ws.rs.ext.MessageBodyWriter;
@@ -112,7 +114,7 @@ public class EmbeddedServer {
     private void registerResources(ResourceConfig application) {
         application.register(JacksonJaxbJsonProvider.class, MessageBodyReader.class, MessageBodyWriter.class);
 
-       /* application.register((Feature) context -> {
+        /*application.register((Feature) context -> {
             serviceLocator = ServiceLocatorProvider.getServiceLocator(context);
             return false;
         });*/

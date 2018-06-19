@@ -26,6 +26,8 @@ public class Main {
         try {
             BootConfig config = BootConfigLoader.getBootstrapConfig(fileLocation);
             srv = EmbeddedServer.getInstance().run(config);
+            logger.log(Level.FINE, "Server startd!!");
+            System.out.println("Started Service....");
         } catch (IOException e) {
             logger.log(Level.FINE, "Exception", e);
             throw e;
