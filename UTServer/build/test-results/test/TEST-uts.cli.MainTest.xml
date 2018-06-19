@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="uts.cli.MainTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-06-19T16:45:11" hostname="SKUPPALA-LAP1" time="8.521">
+<testsuite name="uts.cli.MainTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-06-19T17:35:33" hostname="SKUPPALA-LAP1" time="8.381">
   <properties/>
-  <testcase name="serverStartTest" classname="uts.cli.MainTest" time="6.201"/>
-  <testcase name="redisPoolTest" classname="uts.cli.MainTest" time="2.319"/>
+  <testcase name="serverStartTest" classname="uts.cli.MainTest" time="6.165"/>
+  <testcase name="redisPoolTest" classname="uts.cli.MainTest" time="2.216"/>
   <system-out><![CDATA[url path :  /D:/sundeep/work2016/UrlThreatService/UTServer/build/resources/test/TestBootConfig.json
 Starting Service....
 Started Service....
@@ -10,9 +10,9 @@ Started Service....
  stop srvr
 Exception: Could not get a resource from the pool
 ]]></system-out>
-  <system-err><![CDATA[Jun 19, 2018 10:15:15 PM org.glassfish.grizzly.http.server.NetworkListener start
+  <system-err><![CDATA[Jun 19, 2018 11:05:37 PM org.glassfish.grizzly.http.server.NetworkListener start
 INFO: Started listener bound to [0.0.0.0:8990]
-Jun 19, 2018 10:15:15 PM org.glassfish.grizzly.http.server.HttpServer start
+Jun 19, 2018 11:05:37 PM org.glassfish.grizzly.http.server.HttpServer start
 INFO: [HttpServer] Started.
 redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
 	at redis.clients.util.Pool.getResource(Pool.java:53)
