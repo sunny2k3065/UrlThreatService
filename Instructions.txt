@@ -1,13 +1,29 @@
 Instructions
 
-Install Redis: 
+1) Install Redis: 
 
 protected mode off
 loopback bind address commented in redis.conf to allow for external connections
 
+2) Download project from git repo: https://github.com/sunny2k3065/UrlThreatService
 
+Navigate to path: UrlThreatService/tree/master/UTServer/build/distributions
 
-UTServer.bat bootConfig=.\bootConfig.json
+-Copy tar or zip version of file(based on OS) "UTServer-1.0-SNAPSHOT.zip"  to any location 
+- unzip the file
+- cd UTServer-1.0-SNAPSHOT/UTServer-1.0-SNAPSHOT/bin
+- create a file by name "bootConfig.json"
+- add the following json snippet and save:
+
+{
+  "serverPort" : "8990",
+  "redisHost"  : "slc10wss.us.oracle.com",
+  "serverClusterId" :1
+
+}
+
+Here: the redisHost is where a vanilla redis is installed in standalone mode. Cluster mode should be use but is not implemented in this prototype.
+- start the server : UTServer.bat bootConfig=.\bootConfig.json
 
 
 
@@ -54,3 +70,47 @@ Content-Type: application/x-www-form-urlencoded
 
 threat data exists and url is marked as a threat
 Response: {"threatIndex":1,"httpAllowed":false,"postAllowed":true}
+
+
+Example with mutiple slases in path :
+GET:
+http://localhost:8990/uts/1/growth.com:80/t1%2Ft2%3Ftype%3Dbb
+
+url:  http://localhost:8990/uts/1/growth.com:80/t1%2Ft2%3Ftype%3Dbb
+
+path+query decoded will be : t1/t2?type=bb
+Here the path +query part needs to url encoded to preserve the notation 
+
+
+
+POST:
+http://localhost:8990/uts/1/threaturl
+
+Content-Type: application/json
+{
+	"hostPort": "growth.com:80",
+	"pathQuery": "t1/t2?type=bb",
+	"threatIndex": 1,
+	"httpAllowed": false,
+	"postAllowed": true
+}
+
+Basic Arch reqs:
+
+1) Fast reads:
+2) scalable writes with eventual consistency across multiple instances
+
+So the design is as illustrated in the archdesign.jpg 
+
+
+
+TBD & Gotcha list:
+
+1) The router service implementation front ending multiple instances of the above server 
+-  the router service does "consistent hashing ex: crc32" based partition of requests for horizontal scalability in addition to the redis cluster.
+-  this gives another degree of control on scaling and provides local caching for entries.
+-  It can have dynamic discovery for runtime added routes
+
+2) Implementtion of a size bound Most recently used elastic cache is pending in the current prototype. Currently used a hashmap in the CachedDataProvider Impl
+
+
