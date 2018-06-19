@@ -2,14 +2,16 @@ package uts.server;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-@JsonInclude(JsonInclude.Include.NON_EMPTY) public class ThreatResponse {
+@JsonInclude(JsonInclude.Include.NON_EMPTY) public class ThreatResponse extends ThreatRequest{
 
-    private Boolean isThreat;
+    public Boolean getWriteSuccess() {
+        return writeSuccess;
+    }
 
-    private Boolean isHttpAllowed;
+    public void setWriteSuccess(Boolean writeSuccess) {
+        this.writeSuccess = writeSuccess;
+    }
 
-    private Boolean isGetAllowed;
-
-    private Boolean isPostAllowed;
+    private Boolean writeSuccess;
 
 }

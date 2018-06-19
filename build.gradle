@@ -14,7 +14,7 @@ subprojects {
 
     sourceCompatibility = 1.8
 
-    mainClassName = 'server.cli.Main'
+    mainClassName = 'uts.cli.Main'
 
     repositories {
         mavenCentral()

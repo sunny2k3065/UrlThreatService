@@ -35,10 +35,11 @@ public class CachedDataProvider extends DataProvider{
 
                 json = dp.getProviderThreatData(hostPort,pathQuery);
 
-                if(json == null || json.isEmpty()){
-                    json = getNotExistingThreatResponse();
+                if(json != null || !json.isEmpty()){
+
+                    domainMap.put(pathQuery, json);
                 }
-                domainMap.put(pathQuery, json);
+
 
             }
 
@@ -47,10 +48,7 @@ public class CachedDataProvider extends DataProvider{
 
     }
 
-    private String getNotExistingThreatResponse() {
 
-
-    }
 
     @Override public boolean writeProviderThreatData(String hostPort, String pathQuery, String json) {
         return dp.writeProviderThreatData(hostPort, pathQuery, json);

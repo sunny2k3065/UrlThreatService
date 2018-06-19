@@ -7,6 +7,7 @@ import org.glassfish.hk2.api.ServiceLocator;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.ServerProperties;
+import uts.config.BootConfig;
 
 import javax.ws.rs.core.UriBuilder;
 import javax.ws.rs.ext.MessageBodyReader;
@@ -39,17 +40,19 @@ public class EmbeddedServer {
         return startTime.get();
     }
 
-    public void run() throws IOException, InterruptedException {
+    public HttpServer run(BootConfig config) throws IOException, InterruptedException {
         String message;
-        URI uri = UriBuilder.fromUri("http://" + NetworkListener.DEFAULT_NETWORK_HOST).port(parseAndValidatePort()).build();
+        URI uri = UriBuilder.fromUri("http://" + NetworkListener.DEFAULT_NETWORK_HOST).port(parseAndValidatePort(config)).build();
         HttpServer server = createServer(uri);
         // Ensure the server startup is clean
-        if (startServer(server) == false) {
-            return;
+        /*if (startServer(server) == false) {
+            return server;
         } else {
 
             waitForShutdown();
-        }
+        }*/
+        startServer(server);
+        return server;
     }
 
     private HttpServer createServer(URI uri) throws IOException {
@@ -79,8 +82,11 @@ public class EmbeddedServer {
         Thread.currentThread().join();
     }
 
-    private int parseAndValidatePort() {
+    private int parseAndValidatePort(BootConfig config) {
         String portStr = System.getProperty("servicePort", "");
+        if(portStr == null || portStr.isEmpty()){
+            portStr = config.getServerPort();
+        }
         try {
             int port = Integer.parseInt(portStr);
             if (port < 0 || port > 0xFFFF) {
