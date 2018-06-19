@@ -1,0 +1,56 @@
+Instructions
+
+Install Redis: 
+
+protected mode off
+loopback bind address commented in redis.conf to allow for external connections
+
+
+
+UTServer.bat bootConfig=.\bootConfig.json
+
+
+
+Example Request Responses:
+
+attribute "threatIndex" : // 1 : is a threat, -1: not a threat, 0: no threat data at server
+
+step 1: 
+
+
+GET http://localhost:8990/uts/1/google.com:80/search11111?a=tsdfdsfsf
+Content-Type: application/x-www-form-urlencoded
+
+No threat data exists at server: 
+Response: {"threatIndex":0}
+
+
+
+step 2:
+
+
+POST http://localhost:8990/uts/1/threaturl
+
+Content-Type: application/json
+
+{
+	"hostPort": "google.com:80",
+	"pathQuery": "search11111?a=tsdfdsfsf",
+	"threatIndex": 1,
+	"httpAllowed": false,
+	"postAllowed": true
+}
+
+Response: 
+{
+    "writeSuccess": true
+}
+
+
+step 3: 
+
+GET http://localhost:8990/uts/1/google.com:80/search11111?a=tsdfdsfsf
+Content-Type: application/x-www-form-urlencoded
+
+threat data exists and url is marked as a threat
+Response: {"threatIndex":1,"httpAllowed":false,"postAllowed":true}
