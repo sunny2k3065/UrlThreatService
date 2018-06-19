@@ -36,7 +36,7 @@ public class Main {
             throw e;
         }
 
-        System.out.println("Service Started");
+
         logger.log(Level.FINE, "Service Started");
 
         return srv;

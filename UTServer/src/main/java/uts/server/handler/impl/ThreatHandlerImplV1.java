@@ -35,7 +35,7 @@ public class ThreatHandlerImplV1 implements ThreatHandler {
         this.dp = sl.getService(DataProvider.class);
         cdp = new CachedDataProvider(dp,sl);
         noDataResponse = getNoDataThreatResponse();
-        System.out.println(" ######### threathandler v1 construction");
+
 
     }
 
@@ -49,7 +49,7 @@ public class ThreatHandlerImplV1 implements ThreatHandler {
 
 
     @Override public ThreatResponse handleGet(String hostPort, String pathQuery) throws IOException {
-        System.out.println(" ####rchd here hostport: "+hostPort + " pathquery: "+pathQuery);
+
         return getThreatData(hostPort,pathQuery,cdp);
     }
 
@@ -83,7 +83,7 @@ public class ThreatHandlerImplV1 implements ThreatHandler {
 
 
     public  boolean writeThreatData(String hostPort, String pathQuery, ThreatRequest request, DataProvider provider ) throws IOException {
-        System.out.println(" ######### In handle post!!");
+
         boolean bool = false;
         try {
             String json  = PayloadHandler.generateJson(request);

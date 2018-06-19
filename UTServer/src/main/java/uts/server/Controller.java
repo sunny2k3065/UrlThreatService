@@ -39,11 +39,11 @@ public class Controller {
 
         String query = uriInfo.getRequestUri().getRawQuery();
         String pathQuery = (query!= null && query.length() >0)? new StringBuffer(path).append("?").append(query).toString(): path;
-        System.out.println(" #########ENtering!!! cntroller!!: "+sl.getName());
+
 
         ThreatHandler th = sl.getService(ThreatHandler.class, version);
 
-        System.out.println(" ## threat obtained!! "+th!=null?th.getClass().getCanonicalName(): "null obtained" );
+
         return th.handleGet(hostPort, pathQuery);
 
     }
@@ -55,7 +55,7 @@ public class Controller {
     public ThreatResponse post(ThreatRequest request,
             @PathParam("version") String version) throws IOException {
 
-        System.out.println(" post req is parsed: "+ request.toString());
+
         version = "V" + version;
 
         return sl.getService(ThreatHandler.class, version).handlePost(request, request.getHostPort(), request.getPathQuery());
