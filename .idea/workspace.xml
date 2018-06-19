@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caefcd5d-5cf2-4ae3-b050-e344d505d590" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/UTServer/build/classes/main/uts/server/ThreatResponseHandler.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/build/classes/main/uts/cli/EmbeddedServer.class" afterPath="$PROJECT_DIR$/UTServer/build/classes/main/uts/cli/EmbeddedServer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/build/classes/main/uts/cli/Main.class" afterPath="$PROJECT_DIR$/UTServer/build/classes/main/uts/cli/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/build/classes/main/uts/config/UTSResourceConfig.class" afterPath="$PROJECT_DIR$/UTServer/build/classes/main/uts/config/UTSResourceConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/build/classes/main/uts/server/ThreatResponse.class" afterPath="$PROJECT_DIR$/UTServer/build/classes/main/uts/server/ThreatResponse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/build/classes/test/uts/cli/MainTest.class" afterPath="$PROJECT_DIR$/UTServer/build/classes/test/uts/cli/MainTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/build/distributions/UTServer-1.0-SNAPSHOT.tar" afterPath="$PROJECT_DIR$/UTServer/build/distributions/UTServer-1.0-SNAPSHOT.tar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/build/distributions/UTServer-1.0-SNAPSHOT.zip" afterPath="$PROJECT_DIR$/UTServer/build/distributions/UTServer-1.0-SNAPSHOT.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/build/jacoco/test.exec" afterPath="$PROJECT_DIR$/UTServer/build/jacoco/test.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/build/libs/UTServer-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/UTServer/build/libs/UTServer-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/build.gradle" afterPath="$PROJECT_DIR$/UTServer/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/build/reports/tests/test/index.html" afterPath="$PROJECT_DIR$/UTServer/build/reports/tests/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/build/scripts/UTServer" afterPath="$PROJECT_DIR$/UTServer/build/scripts/UTServer" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/build/scripts/UTServer.bat" afterPath="$PROJECT_DIR$/UTServer/build/scripts/UTServer.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/build/tmp/jar/MANIFEST.MF" afterPath="$PROJECT_DIR$/UTServer/build/tmp/jar/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/src/main/java/uts/cli/EmbeddedServer.java" afterPath="$PROJECT_DIR$/UTServer/src/main/java/uts/cli/EmbeddedServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/src/main/java/uts/cli/Main.java" afterPath="$PROJECT_DIR$/UTServer/src/main/java/uts/cli/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/src/main/java/uts/config/UTSResourceConfig.java" afterPath="$PROJECT_DIR$/UTServer/src/main/java/uts/config/UTSResourceConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/src/main/java/uts/dataprovider/impl/CachedDataProvider.java" afterPath="$PROJECT_DIR$/UTServer/src/main/java/uts/dataprovider/impl/CachedDataProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/src/main/java/uts/server/ThreatRequest.java" afterPath="$PROJECT_DIR$/UTServer/src/main/java/uts/server/ThreatRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/src/main/java/uts/server/ThreatResponse.java" afterPath="$PROJECT_DIR$/UTServer/src/main/java/uts/server/ThreatResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/src/main/java/uts/server/json/PayloadHandler.java" afterPath="$PROJECT_DIR$/UTServer/src/main/java/uts/server/json/PayloadHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UTServer/src/test/java/uts/cli/MainTest.java" afterPath="$PROJECT_DIR$/UTServer/src/test/java/uts/cli/MainTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/UTServer/src/main/java/uts/server/ThreatResponseHandler.java" afterPath="$PROJECT_DIR$/UTServer/src/main/java/uts/server/Controller.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -132,14 +107,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BootConfigLoader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UTServer/src/main/java/uts/config/BootConfigLoader.java">
+      <file leaf-file-name="gradle.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gradle.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -182,30 +165,20 @@
         <entry file="file://$PROJECT_DIR$/UTServer/src/main/java/uts/cli/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="23" column="57" lean-forward="true" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
+              <caret line="23" column="57" lean-forward="false" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UTServer/src/test/java/uts/cli/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+            <state relative-caret-position="238">
+              <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UTServer/src/main/java/uts/cli/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="18" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -990,6 +963,7 @@
         <option value="$PROJECT_DIR$/UTServer/src/main/java/uts/cli/Main.java" />
         <option value="$PROJECT_DIR$/UTServer/src/main/java/uts/cli/EmbeddedServer.java" />
         <option value="$PROJECT_DIR$/UTServer/src/test/java/uts/cli/MainTest.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -1039,86 +1013,6 @@
               <item name="UrlThreatService" type="b2602c69:ProjectViewProjectNode" />
               <item name="UrlThreatService" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="UTServer" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="UrlThreatService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UrlThreatService" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="UTServer" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UrlThreatService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UrlThreatService" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="UTServer" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="UrlThreatService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UrlThreatService" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="UTServer" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UrlThreatService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UrlThreatService" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="UTServer" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cli" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UrlThreatService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UrlThreatService" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="UTServer" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UrlThreatService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UrlThreatService" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="UTServer" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UrlThreatService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UrlThreatService" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="UTServer" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="UrlThreatService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UrlThreatService" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="UTServer" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UrlThreatService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UrlThreatService" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="UTServer" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cli" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UrlThreatService" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UrlThreatService" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="UTServer" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1348,6 +1242,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.4974293" order="7" side_tool="false" content_ui="tabs" />
@@ -1358,7 +1253,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.49485862" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293011" sideWeight="0.4974293" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293011" sideWeight="0.4974293" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2596401" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1396,7 +1291,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/UTSCommon/src/main/java/cli/Main.java" />
     <entry file="file://$PROJECT_DIR$/UTSCommon/src/main/java/cli/EmbeddedServer.java" />
     <entry file="file://$PROJECT_DIR$/UTSCommon/src/main/resources/services/org.glassfish.jersey.server.ResourceConfig" />
     <entry file="file://$PROJECT_DIR$/UTSCommon/src/main/java/config/UTSResourceConfig.java" />
@@ -1451,14 +1345,6 @@
     <entry file="file://$PROJECT_DIR$/UTSCommon/src/main/java/cli/Test.java" />
     <entry file="file://$PROJECT_DIR$/UTSCommon/build.gradle" />
     <entry file="file://$PROJECT_DIR$/UTSServer/src/main/java/cli/Main.java" />
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradlew.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1100">
@@ -1696,7 +1582,7 @@
     <entry file="file://$PROJECT_DIR$/UTServer/src/main/java/uts/cli/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="23" column="57" lean-forward="true" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
+          <caret line="23" column="57" lean-forward="false" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -1711,11 +1597,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/UTServer/src/test/java/uts/cli/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        <state relative-caret-position="238">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

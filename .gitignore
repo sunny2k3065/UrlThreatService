@@ -1,0 +1,10 @@
+.gradle
+*.iml
+*.ipr
+*.iws
+*.pyc
+classes
+.classpath
+.project
+.settings
+.metadata
