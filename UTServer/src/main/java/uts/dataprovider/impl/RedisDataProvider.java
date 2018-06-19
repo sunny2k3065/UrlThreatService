@@ -21,16 +21,14 @@ public class RedisDataProvider extends DataProvider {
     }
 
     @Override public String getProviderThreatData(String hostPort, String pathQuery) {
-        System.out.println(" ###v  b4 redispool impl");
+
         RedisPool pool = RedispoolFactory.getInstance().getPool();
-        System.out.println(" ###v  got redispool impl");
+
         try (Jedis jedis =  pool.getJedisPool().getResource()){
-            // do operations with jedis resource
-            System.out.println(" ### trying hget");
+
             String ret = jedis.hget(hostPort, pathQuery);
 
-            System.out.println(" ### trying hget return : "+ret);
-            System.out.println(" get response : "+ret);
+
             return ret;
 
         }catch (Exception e){
